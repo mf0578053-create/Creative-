@@ -43,7 +43,7 @@ const TEAM = [
   },
   {
     name: "Hanzala Ahmed",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     icon: <Code className="w-6 h-6" />,
     bio: "Turning designs into pixel-perfect, responsive web applications.",
     skills: ["React", "Tailwind CSS", "Next.js"],
@@ -52,7 +52,7 @@ const TEAM = [
   },
   {
     name: "Sameer Sajid",
-    role: "Fullstack Developer",
+    role: "App Developer",
     icon: <Terminal className="w-6 h-6" />,
     bio: "Building robust backends and scalable system architectures.",
     skills: ["Node.js", "PostgreSQL", "Cloud Architecture"],
