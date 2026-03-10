@@ -7,7 +7,6 @@ import {
   Code, 
   Terminal, 
   ArrowRight, 
-  Github, 
   Twitter, 
   Linkedin, 
   Mail, 
@@ -29,8 +28,13 @@ const TEAM = [
     icon: <Palette className="w-6 h-6" />,
     bio: "Visual storyteller specializing in brand identity and digital illustrations.",
     skills: ["Branding", "Illustration", "Print Design"],
-    color: "from-blue-500 to-blue-700",
-    image: null
+    color: "from-indigo-500 to-emerald-500",
+    image: null,
+    links: {
+      portfolio: "https://fahad-malik.vercel.app/",
+      twitter: "#",
+      linkedin: "#"
+    }
   },
   {
     name: "Mr. Fazi",
@@ -38,8 +42,13 @@ const TEAM = [
     icon: <Layout className="w-6 h-6" />,
     bio: "Crafting intuitive user experiences and beautiful digital interfaces.",
     skills: ["User Research", "Prototyping", "Figma"],
-    color: "from-blue-500 to-blue-700",
-    image: "https://res.cloudinary.com/dsacnpxmq/image/upload/v1772684208/IMG-20250521-WA0017_lg8iwr.jpg"
+    color: "from-emerald-500 to-indigo-500",
+    image: "https://res.cloudinary.com/dsacnpxmq/image/upload/v1772684208/IMG-20250521-WA0017_lg8iwr.jpg",
+    links: {
+      portfolio: "https://faizan-akram.vercel.app/#",
+      twitter: "#",
+      linkedin: "#"
+    }
   },
   {
     name: "Hanzala Ahmed",
@@ -47,8 +56,13 @@ const TEAM = [
     icon: <Code className="w-6 h-6" />,
     bio: "Turning designs into pixel-perfect, responsive web applications.",
     skills: ["React", "Tailwind CSS", "Next.js"],
-    color: "from-blue-500 to-blue-700",
-    image: "https://res.cloudinary.com/dsacnpxmq/image/upload/v1772684218/b9f7cafd-6636-4be5-aa1c-bb053211f003_ykuytg.jpg"
+    color: "from-indigo-600 to-indigo-800",
+    image: "https://res.cloudinary.com/dsacnpxmq/image/upload/v1772684218/b9f7cafd-6636-4be5-aa1c-bb053211f003_ykuytg.jpg",
+    links: {
+      portfolio: "#",
+      twitter: "#",
+      linkedin: "#"
+    }
   },
   {
     name: "Sameer Sajid",
@@ -56,8 +70,13 @@ const TEAM = [
     icon: <Terminal className="w-6 h-6" />,
     bio: "Building robust backends and scalable system architectures.",
     skills: ["Node.js", "PostgreSQL", "Cloud Architecture"],
-    color: "from-blue-500 to-blue-700",
-    image: "https://res.cloudinary.com/dsacnpxmq/image/upload/v1772684218/d271ae5e-8238-44d9-b7d4-716955026ce9_jfeg4f.jpg"
+    color: "from-emerald-600 to-emerald-800",
+    image: "https://res.cloudinary.com/dsacnpxmq/image/upload/v1772684218/d271ae5e-8238-44d9-b7d4-716955026ce9_jfeg4f.jpg",
+    links: {
+      portfolio: "https://www.sameercodes.online/",
+      twitter: "#",
+      linkedin: "#"
+    }
   }
 ];
 
@@ -89,7 +108,7 @@ export default function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen selection:bg-emerald-500/30">
+    <div className="min-h-screen selection:bg-indigo-500/30">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -99,10 +118,10 @@ export default function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-sm font-medium text-zinc-600 hover:text-blue-600 transition-colors">Services</a>
-            <a href="#team" className="text-sm font-medium text-zinc-600 hover:text-blue-600 transition-colors">The Team</a>
-            <a href="#work" className="text-sm font-medium text-zinc-600 hover:text-blue-600 transition-colors">Our Work</a>
-            <button className="px-5 py-2.5 bg-zinc-900 text-white rounded-full text-sm font-bold hover:bg-blue-600 transition-all">
+            <a href="#services" className="text-sm font-medium text-zinc-600 hover:text-indigo-600 transition-colors">Services</a>
+            <a href="#team" className="text-sm font-medium text-zinc-600 hover:text-indigo-600 transition-colors">The Team</a>
+            <a href="#work" className="text-sm font-medium text-zinc-600 hover:text-indigo-600 transition-colors">Our Work</a>
+            <button className="px-5 py-2.5 bg-zinc-900 text-white rounded-full text-sm font-bold hover:bg-indigo-600 transition-all">
               Start a Project
             </button>
           </div>
@@ -126,7 +145,7 @@ export default function App() {
               <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
               <a href="#team" onClick={() => setIsMenuOpen(false)}>The Team</a>
               <a href="#work" onClick={() => setIsMenuOpen(false)}>Our Work</a>
-              <button className="w-full py-4 bg-blue-600 text-white rounded-2xl">
+              <button className="w-full py-4 bg-indigo-600 text-white rounded-2xl">
                 Contact Us
               </button>
             </div>
@@ -137,8 +156,8 @@ export default function App() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 px-6 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] bg-blue-700/10 blur-[120px] rounded-full" />
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full" />
+          <div className="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] bg-emerald-500/10 blur-[120px] rounded-full" />
         </div>
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -147,7 +166,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-blue-600 text-xs font-bold uppercase tracking-widest mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-indigo-600 text-xs font-bold uppercase tracking-widest mb-8">
               <Users className="w-3 h-3" /> Full-Service Creative Agency
             </span>
             <motion.h1 
@@ -173,7 +192,7 @@ export default function App() {
                   animate: { opacity: 1, y: 0, transition: { delay: 0.2 } },
                   hover: { 
                     scale: 1.02,
-                    filter: "brightness(1.1) drop-shadow(0 0 20px rgba(37, 99, 235, 0.2))",
+                    filter: "brightness(1.1) drop-shadow(0 0 20px rgba(79, 70, 229, 0.2))",
                     transition: { duration: 0.4, ease: "easeOut" }
                   }
                 }}
@@ -191,12 +210,17 @@ export default function App() {
               creative forces to build digital experiences that define the next generation of brands.
             </motion.p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg shadow-blue-500/20">
+              <button className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg shadow-indigo-500/20">
                 View Our Portfolio <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="w-full sm:w-auto px-8 py-4 bg-white border border-zinc-200 rounded-2xl font-bold hover:bg-zinc-50 transition-colors text-zinc-900">
+              <a 
+                href="https://calendly.com/creativenexus05/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-4 bg-white border border-zinc-200 rounded-2xl font-bold hover:bg-zinc-50 transition-colors text-zinc-900 flex items-center justify-center"
+              >
                 Meet the Team
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -213,9 +237,9 @@ export default function App() {
               </p>
             </div>
             <div className="flex items-center gap-4 text-zinc-400 font-mono text-sm">
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> Strategy</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> Design</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> Code</span>
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Strategy</span>
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Design</span>
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Code</span>
             </div>
           </div>
 
@@ -226,14 +250,14 @@ export default function App() {
                 whileHover={{ 
                   y: -12,
                   scale: 1.02,
-                  backgroundColor: "#1d4ed8", // Royal Blue (blue-700)
+                  backgroundColor: "#4f46e5", // Indigo-600
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 className="glass-card p-8 transition-all duration-300 group cursor-pointer relative overflow-hidden"
               >
                 <div className="relative z-10">
                   <div className="mb-6 p-3 bg-zinc-50 rounded-xl w-fit group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300 border border-zinc-100 group-hover:border-transparent">
-                    <service.icon className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                    <service.icon className="w-8 h-8 text-indigo-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-zinc-900 group-hover:text-white transition-colors duration-300">{service.title}</h3>
                   <p className="text-zinc-600 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
@@ -281,9 +305,15 @@ export default function App() {
                   <div className="absolute bottom-6 left-6 right-6">
                     <div className="glass-card p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                       <div className="flex gap-3">
-                        <Github className="w-5 h-5 text-zinc-500 hover:text-blue-600 cursor-pointer" />
-                        <Twitter className="w-5 h-5 text-zinc-500 hover:text-blue-600 cursor-pointer" />
-                        <Linkedin className="w-5 h-5 text-zinc-500 hover:text-blue-600 cursor-pointer" />
+                        <a href={member.links.portfolio} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-indigo-600 transition-colors">
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                        <a href={member.links.twitter} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-indigo-600 transition-colors">
+                          <Twitter className="w-5 h-5" />
+                        </a>
+                        <a href={member.links.linkedin} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-indigo-600 transition-colors">
+                          <Linkedin className="w-5 h-5" />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -294,7 +324,7 @@ export default function App() {
                   </div>
                   <h3 className="text-2xl font-display font-bold text-zinc-900">{member.name}</h3>
                 </div>
-                <p className="text-blue-600 font-bold text-sm uppercase tracking-wider mb-4">{member.role}</p>
+                <p className="text-indigo-600 font-bold text-sm uppercase tracking-wider mb-4">{member.role}</p>
                 <p className="text-zinc-600 text-sm mb-6 leading-relaxed">{member.bio}</p>
                 <div className="flex flex-wrap gap-2">
                   {member.skills.map((skill, sIdx) => (
@@ -335,7 +365,7 @@ export default function App() {
 
       {/* CTA / Contact Section */}
       <section id="contact" className="py-24 px-6 relative overflow-hidden bg-zinc-50">
-        <div className="absolute inset-0 bg-blue-600/5" />
+        <div className="absolute inset-0 bg-indigo-600/5" />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -351,12 +381,12 @@ export default function App() {
                   className="flex items-center gap-4 group cursor-pointer"
                   onClick={() => setIsContactModalOpen(true)}
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-zinc-200 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                  <div className="w-12 h-12 rounded-2xl bg-white border border-zinc-200 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-sm">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Email Us</p>
-                    <p className="text-zinc-900 font-bold group-hover:text-blue-600 transition-colors">creativenexus05@gmail.com</p>
+                    <p className="text-zinc-900 font-bold group-hover:text-indigo-600 transition-colors">creativenexus05@gmail.com</p>
                   </div>
                 </div>
                 
@@ -366,7 +396,7 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group cursor-pointer"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-zinc-200 flex items-center justify-center text-blue-600 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-sm">
+                  <div className="w-12 h-12 rounded-2xl bg-white border border-zinc-200 flex items-center justify-center text-indigo-600 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-sm">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -380,7 +410,7 @@ export default function App() {
             <div className="glass-card p-8 md:p-12 relative overflow-hidden group">
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-8 text-zinc-900 flex items-center gap-3">
-                  <MessageSquare className="w-6 h-6 text-blue-600" />
+                  <MessageSquare className="w-6 h-6 text-indigo-600" />
                   Send us a message
                 </h3>
                 
@@ -390,7 +420,7 @@ export default function App() {
                     <input 
                       type="email" 
                       placeholder="name@example.com" 
-                      className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all text-zinc-900"
+                      className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 transition-all text-zinc-900"
                     />
                   </div>
                   
@@ -399,11 +429,11 @@ export default function App() {
                     <textarea 
                       placeholder="Tell us about your project..." 
                       rows={4}
-                      className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all text-zinc-900 resize-none"
+                      className="w-full px-6 py-4 bg-white border border-zinc-200 rounded-2xl focus:outline-none focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 transition-all text-zinc-900 resize-none"
                     />
                   </div>
 
-                  <button className="w-full py-5 bg-blue-600 text-white rounded-2xl font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-blue-500/25 flex items-center justify-center gap-3 group">
+                  <button className="w-full py-5 bg-indigo-600 text-white rounded-2xl font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-3 group">
                     Send Message
                     <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </button>
@@ -411,7 +441,7 @@ export default function App() {
               </div>
               
               {/* Decorative background element */}
-              <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-indigo-600/5 rounded-full blur-3xl pointer-events-none" />
             </div>
           </div>
         </div>
@@ -442,7 +472,7 @@ export default function App() {
               </button>
 
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-blue-600/10 flex items-center justify-center text-blue-600 mb-8">
+                <div className="w-16 h-16 rounded-2xl bg-indigo-600/10 flex items-center justify-center text-indigo-600 mb-8">
                   <Mail className="w-8 h-8" />
                 </div>
                 
@@ -459,11 +489,11 @@ export default function App() {
                       required
                       placeholder="How can we help you?" 
                       rows={6}
-                      className="w-full px-6 py-4 bg-zinc-50 border border-zinc-200 rounded-2xl focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all text-zinc-900 resize-none"
+                      className="w-full px-6 py-4 bg-zinc-50 border border-zinc-200 rounded-2xl focus:outline-none focus:border-indigo-600 focus:ring-4 focus:ring-indigo-600/5 transition-all text-zinc-900 resize-none"
                     />
                   </div>
 
-                  <button className="w-full py-5 bg-blue-600 text-white rounded-2xl font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-blue-500/25 flex items-center justify-center gap-3 group">
+                  <button className="w-full py-5 bg-indigo-600 text-white rounded-2xl font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-3 group">
                     Send Message
                     <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </button>
@@ -471,7 +501,7 @@ export default function App() {
               </div>
 
               {/* Decorative background element */}
-              <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-indigo-600/5 rounded-full blur-3xl pointer-events-none" />
             </motion.div>
           </div>
         )}
@@ -490,9 +520,9 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="#" className="text-zinc-400 hover:text-blue-600 transition-colors"><Twitter className="w-5 h-5" /></a>
-            <a href="#" className="text-zinc-400 hover:text-blue-600 transition-colors"><Github className="w-5 h-5" /></a>
-            <a href="#" className="text-zinc-400 hover:text-blue-600 transition-colors"><Linkedin className="w-5 h-5" /></a>
+            <a href="#" className="text-zinc-400 hover:text-indigo-600 transition-colors"><Twitter className="w-5 h-5" /></a>
+            <a href="#" className="text-zinc-400 hover:text-indigo-600 transition-colors"><ExternalLink className="w-5 h-5" /></a>
+            <a href="#" className="text-zinc-400 hover:text-indigo-600 transition-colors"><Linkedin className="w-5 h-5" /></a>
           </div>
         </div>
       </footer>

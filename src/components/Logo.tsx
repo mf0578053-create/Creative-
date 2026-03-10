@@ -4,7 +4,7 @@ export const Logo = ({ className = "w-10 h-10" }: { className?: string }) => {
   return (
     <div className={`relative ${className} group`}>
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-blue-400/20 blur-lg rounded-full group-hover:bg-blue-400/40 transition-all duration-500" />
+      <div className="absolute inset-0 bg-indigo-400/20 blur-lg rounded-full group-hover:bg-emerald-400/40 transition-all duration-500" />
       
       <svg
         viewBox="0 0 100 100"
@@ -34,7 +34,7 @@ export const Logo = ({ className = "w-10 h-10" }: { className?: string }) => {
           cy="50"
           r="8"
           fill="currentColor"
-          className="animate-pulse text-blue-600"
+          className="animate-pulse text-indigo-600"
         />
         
         {/* Connecting Lines */}
@@ -48,8 +48,8 @@ export const Logo = ({ className = "w-10 h-10" }: { className?: string }) => {
 
         <defs>
           <linearGradient id="logo-gradient" x1="10" y1="10" x2="90" y2="90" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#2563eb" /> {/* Blue 600 */}
-            <stop offset="1" stopColor="#1d4ed8" /> {/* Blue 700 */}
+            <stop stopColor="#4f46e5" /> {/* Indigo 600 */}
+            <stop offset="1" stopColor="#10b981" /> {/* Emerald 500 */}
           </linearGradient>
         </defs>
       </svg>
